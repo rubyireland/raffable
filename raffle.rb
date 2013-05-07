@@ -1,181 +1,51 @@
-# raffle.rb
-# Summary: quick-and-dirty Ruby script to raffle a prize.
-# Author: Kevin Noonan.
+# quick-and-dirty Ruby script to raffle a prize
+# author: Kevin Noonan.
 #
-# State in advance: attendance at the event is mandatory to be 
-# eligible for the prize-draw.
-# If someone who's not attending is randomly chosen, re-run the script.
-#
+# contributor: Sleep statements and general confusion added by @theirishpenguin
 # (The list below has *all* Ruby Ireland members, at least on Meetup
 # as at 15th April 2013.)
 #
-# Some people only use first-names on Meetup. 
-# Refer to the Meetup profile if you can't distinguish who should win.
 
-members= [ 
-"cathal Browne",
-"Adam McCarthy",
-"Adrien Siami",
-"Aidan Finn",
-"Aidan Haran",
-"Alan",
-"Alan Larkin",
-"Alex Beregszaszi",
-"Alexander Nordlund",
-"Anatoly Mikhaylov",
-"Andrei Balcanasu",
-"Andrej Hosna",
-"Aoife",
-"Artur",
-"Barry Byrne",
-"Barry Kirby",
-"Bob Long",
-"Brian Kenny",
-"Brian Phillips",
-"Brian Ward",
-"Cathal Browne",
-"Charlie",
-"Chris McGrath",
-"Chris Mowforth",
-"Chris Xatzi",
-"Christian Sommerauer",
-"Ciaran Lee",
-"Ciaran Archer",
-"Clive Foley",
-"Colm Larkin",
-"Colum Twomey",
-"Conor Nugent",
-"cormac",
-"Cormac Kelly",
-"Dan Laffan",
-"Dani Martos Kst",
-"Daniel Beere",
-"Darragh Curran",
-"David Curran",
-"David Ramalho",
-"Declan",
-"Des McDonnell",
-"Diarmuid Bourke",
-"ed lenox",
-"Elaine",
-"Emily",
-"Emmanuel Bourgerie",
-"Eoin",
-"Eric Theise",
-"Ewa",
-"Fergal Condron",
-"Fergal R",
-"Fernando Abellan",
-"Finbarr O'Donoghue",
-"Fintan Fairmichael",
-"Garrett Heaver",
-"Gary R",
-"Gavin Joyce",
-"Ger Hartnett",
-"Ger Kelly",
-"gian",
-"Gosia",
-"Greg",
-"Greg Porter",
-"Gregor Macadam",
-"Gregory Chomatas",
-"gstenson",
-"Iain McNulty",
-"Isma",
-"Ivano",
-"Jakub Jarosz",
-"James Hogan",
-"Jan Blanchard",
-"Janelle Eagleton",
-"Jaume Tarradas Llort",
-"Jena",
-"Jimmy Tang",
-"John Bradley",
-"John Coleman",
-"John Costello",
-"John Kavanagh",
-"John O'Gara",
-"John Smyth",
-"Jos",
-"Jules",
-"Julien Hugon",
-"Juliusz",
-"Karl Grogan",
-"Kate",
-"Kevin Fagan",
-"Kevin Noonan",
-"Leigh Moyle",
-"Liam Tyrrell",
-"Luca Spiller",
-"Marco",
-"Marco Campana",
-"Mark Finlay",
-"Mark Gomba",
-"Mark Gray",
-"Mark Howard",
-"Mark King",
-"Mark King",
-"Mark Sullivan",
-"Michael Walsh",
-"Mike Gilbert",
-"Miles McGuire",
-"Milton Amaral",
-"Monir",
-"Myriam",
-"Neil Burns",
-"Niall Murphy",
-"Nucc",
-"Oisin Hurley",
-"Orla",
-"Paolo Dona",
-"Patrick Kiernan",
-"Paul Mc Carthy",
-"Paul Michael Watson",
-"Paul O'Connor",
-"Paul Williams",
-"Pawel Raszewski",
-"Peter McKenna",
-"Peter Wood",
-"Petra",
-"Phil",
-"Pierre Schambacher",
-"Piotr Usewicz",
-"pradeep",
-"Rachel Burke",
-"Rinaldo",
-"Robert Clancy",
-"Robert Shedd",
-"Ross Shannon",
-"Sajeev Zacharias",
-"Sarah",
-"Sarah Gavra Boland",
-"Shane Grimes",
-"Shane Moore",
-"Simon Rand",
-"Stefan Mitchell",
-"Stephen Flinter",
-"Stephen Roantree",
-"Steve Quinlan",
-"Suzy Fynes",
-"Sebastien Le Callonnec",
-"Thilo",
-"tim geaney",
-"Tom Van Eyck",
-"Tony Cronin",
-"Veronica Kelly",
-"Victor",
-"Vinny Glennon",
-"Wal",
-"Wesley Gorman",
-"Wisam Fadel",
-"Zoltan Debre"
-]
+ruby_irelanders = File.readlines('ruby_irelanders.csv')
+size = ruby_irelanders.length
 
-size=members.length
+puts ""
+puts "The suspense..."
+puts ""
+sleep 6
+puts "Is"
+puts ""
+sleep 4
+puts "So"
+puts ""
+sleep 6
+puts "Stressful"
+sleep 4
+puts ""
+puts "THE WINNER..."
+puts ""
+sleep 6
 
-print "number of members: "
-puts size
+3.times do
+  random_choice=rand(size).to_i
+  puts "IT'S NOT #{ruby_irelanders[random_choice]}"
+  puts ""
+  sleep 2
+  puts "..."
+  puts ""
+  sleep 6
+end
 
+puts ""
+sleep 6
 random_choice=rand(size).to_i
-
-puts members[random_choice]
+puts "THE WINNER IS..."
+puts ""
+sleep 4
+puts "#{ruby_irelanders[random_choice]}"
+sleep 2
+puts "YES!!!"
+puts ""
+sleep 2
+puts "Claim your Rubymine IDE prize!!!"
+puts ""
